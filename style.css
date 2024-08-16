@@ -67,7 +67,6 @@ main {
   background-color: rgba(255, 255, 255, 0.728);
   color: #33333391;
   cursor: pointer;
-  transition: all 0.3s;
 }
 .button span {
   color: #333;
@@ -93,4 +92,46 @@ main {
   justify-content: center;
   color: #333333c7;
   font-size: 30px;
+}
+@media (max-width: 1024px) {
+  .card {
+    padding: 40px 70px;
+  }
+  .card h2 {
+    font-size: 30px;
+  }
+  .card .score-counter {
+    font-size: 55px;
+  }
+  .card .current {
+    padding: 10px 20px;
+  }
+  .card .current p {
+    font-size: 18px;
+  }
+  .card .current p:nth-child(2) {
+    font-size: 35px;
+  }
+  .button {
+    padding: 7px 20px;
+    font-size: 14px;
+  }
+  .button span {
+    font-size: 17px;
+  }
+  #new-game {
+    top: 260px;
+  }
+  #roll-dice {
+    top: 490px;
+  }
+  #hold {
+    top: 550px;
+  }
+  #dice {
+    width: 80px;
+    height: 80px;
+    top: 350px;
+    font-size: 25px;
+  }
 }
