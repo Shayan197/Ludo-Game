@@ -22,7 +22,6 @@ main {
   background-color: rgba(255, 255, 255, 0.35);
 }
 .card {
-  flex: 50%;
   padding: 6rem 9rem;
   display: flex;
   flex-direction: column;
@@ -93,45 +92,60 @@ main {
   color: #333333c7;
   font-size: 30px;
 }
-@media (max-width: 1024px) {
+@media (max-width: 969px) {
+  main{
+    flex-direction: column;
+    width: 90%;
+    height: 90%;
+  }
   .card {
-    padding: 40px 70px;
+    height: 100%;
+    padding: 10px;
   }
   .card h2 {
     font-size: 30px;
   }
   .card .score-counter {
-    font-size: 55px;
+    padding: 30px;
+    font-size: 30px;
   }
   .card .current {
-    padding: 10px 20px;
+    padding: 5px 10px;
   }
   .card .current p {
-    font-size: 18px;
-  }
-  .card .current p:nth-child(2) {
-    font-size: 35px;
-  }
-  .button {
-    padding: 7px 20px;
-    font-size: 14px;
-  }
-  .button span {
     font-size: 17px;
   }
+  .card .current p:nth-child(2) {
+    font-size: 20px;
+  }
+  #player-2{
+    flex-direction: column-reverse;
+  }
+  .button {
+    padding: 2px 15px;
+    width: 150px;
+    font-size: 15px;
+  }
+  .button span {
+    font-size: 15px;
+  }
   #new-game {
-    top: 260px;
+    top: 10px;
+    left: 110px;
   }
   #roll-dice {
-    top: 490px;
+    top: 270px;
+    left: 110px;
   }
-  #hold {
-    top: 550px;
+  /*#hold {
+    top: 620px;
+    left: 150px;
   }
   #dice {
-    width: 80px;
-    height: 80px;
-    top: 350px;
+    width: 50px;
+    height: 50px;
+    top: 310px;
+    left: 45px;
     font-size: 25px;
-  }
+  }  */
 }
