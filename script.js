@@ -1,10 +1,10 @@
 const images = [
-  "/dice-images/1.PNG",
-  "/dice-images/2.PNG",
-  "/dice-images/3.PNG",
-  "/dice-images/4.PNG",
-  "/dice-images/5.PNG",
-  "/dice-images/6.PNG",
+  "./dice-images/1.PNG",
+  "./dice-images/2.PNG",
+  "./dice-images/3.PNG",
+  "./dice-images/4.PNG",
+  "./dice-images/5.PNG",
+  "./dice-images/6.PNG",
 ];
 const img = document.querySelector("img");
 const h2Elements = document.getElementsByTagName("h2");
