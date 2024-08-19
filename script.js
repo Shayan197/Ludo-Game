@@ -1,5 +1,13 @@
+const images = [
+  "/dice-images/1.PNG",
+  "/dice-images/2.PNG",
+  "/dice-images/3.PNG",
+  "/dice-images/4.PNG",
+  "/dice-images/5.PNG",
+  "/dice-images/6.PNG",
+];
+const img = document.querySelector("img");
 const h2Elements = document.getElementsByTagName("h2");
-
 //player 1
 const player1 = document.getElementById("player-1");
 const displayScore = document.getElementById("display-score");
@@ -16,7 +24,6 @@ const currentScore1 = document.getElementById("current-score1");
 const newGame = document.getElementById("new-game");
 const rollDice = document.getElementById("roll-dice");
 const hold = document.getElementById("hold");
-const dice = document.getElementById("dice");
 
 //Used Veriabels
 let sum = 0;
@@ -28,7 +35,7 @@ let initialBackground = true;
 newGame.addEventListener("click", function () {
   currentScore.innerHTML = "0";
   currentScore1.innerHTML = "0";
-  dice.style.display = "none";
+  img.style.display = "none";
   displayScore.innerHTML = "0";
   displayScore1.innerHTML = "0";
   addedScore = 0;
@@ -52,7 +59,6 @@ hold.addEventListener("click", function () {
     addedScore += sum;
     displayScore.innerHTML = addedScore;
     currentScore.innerHTML = "0";
-    dice.innerHTML = "0";
     sum = 0;
     initialBackground = false;
   } else if (!initialBackground) {
@@ -63,7 +69,6 @@ hold.addEventListener("click", function () {
     addedScore1 += sum;
     displayScore1.innerHTML = addedScore1;
     currentScore1.innerHTML = "0";
-    dice.innerHTML = "0";
     sum = 0;
     initialBackground = true;
   }
@@ -72,12 +77,16 @@ hold.addEventListener("click", function () {
 //Functions
 function Generates() {
   const randomNum = Math.floor(Math.random() * 6) + 1;
-  sum += randomNum;
-  dice.innerHTML = randomNum;
-  dice.style.display = "flex";
-  if (initialBackground) {
-    currentScore.innerHTML = sum;
-  } else {
-    currentScore1.innerHTML = sum;
+  for (let i = 0; i < images.length; i++) {
+    if (i == randomNum) {
+      sum += randomNum;
+      img.style.display = "flex";
+      img.src = images[i - 1];
+      if (initialBackground) {
+        currentScore.innerHTML = sum;
+      } else {
+        currentScore1.innerHTML = sum;
+      }
+    }
   }
 }

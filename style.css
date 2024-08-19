@@ -80,20 +80,15 @@ main {
 #hold {
   top: 550px;
 }
-#dice {
+img {
   position: absolute;
   width: 90px;
   height: 90px;
-  background-color: aliceblue;
   top: 300px;
   display: none;
-  align-items: center;
-  justify-content: center;
-  color: #333333c7;
-  font-size: 30px;
 }
 @media (max-width: 969px) {
-  main{
+  main {
     flex-direction: column;
     width: 90%;
     height: 90%;
@@ -118,34 +113,42 @@ main {
   .card .current p:nth-child(2) {
     font-size: 20px;
   }
-  #player-2{
+  #player-2 {
     flex-direction: column-reverse;
   }
   .button {
     padding: 2px 15px;
     width: 150px;
     font-size: 15px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
   .button span {
     font-size: 15px;
   }
   #new-game {
-    top: 10px;
-    left: 110px;
+    top: 2.5%;
   }
   #roll-dice {
-    top: 270px;
-    left: 110px;
+    top: 59%;
   }
-  /*#hold {
-    top: 620px;
-    left: 150px;
+  #hold {
+    top: 41%;
   }
-  #dice {
-    width: 50px;
-    height: 50px;
-    top: 310px;
-    left: 45px;
-    font-size: 25px;
-  }  */
+  img {
+    width: 45px;
+    height: 45px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+@media (max-height: 666px) {
+  #roll-dice {
+    top: 56%;
+  }
+  #hold {
+    top: 44%;
+  }
 }
